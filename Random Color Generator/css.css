@@ -32,10 +32,21 @@ a {
 
 .block {
     margin-top: 50px;
-    width: 300px;
-    height: 300px;
+}
+
+.square {
     box-shadow: 0 5px 10px rgb(34, 60, 80, 0.5) ;
     transition: background .2s ease;
+}
+
+.square_one {
+    width: 300px;
+    height: 300px;
+}
+
+.square_two {
+    width: 500px;
+    height: 500px;
 }
 .color {
     font-style: 16px;
