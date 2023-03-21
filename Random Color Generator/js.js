@@ -1,6 +1,8 @@
 const squareOne = document.querySelector('.square_one');
+const squareTwo = document.querySelector('.square_two');
 const jsColor = document.querySelector('.js-color');
 const jsBtn = document.querySelector('.js-btn');
+
 const hex = '0123456789ABCDEF';
 
 let randomColor = '#';
@@ -15,13 +17,14 @@ const getRandomColor = () => {
 };
 
 jsBtn.addEventListener('click', () => {
-    getRandomColor();
-    squareOne.style.background = randomColor;
-    jsColor.innerHTML = randomColor;
+        getRandomColor();
+        squareOne.style.background = randomColor;
+        jsColor.innerHTML = randomColor;
+        if (squareOne.hidden === true) {
+        alert('Упс, искомый квадрат отсутствует!');
+    }
 });
 
-
-const squareTwo = document.querySelector('.square_two');
 
 squareOne.onmousedown = function (event) {
     squareOne.style.position = 'absolute';
@@ -50,10 +53,11 @@ squareOne.onmousedown = function (event) {
         ) {
             squareTwo.style.backgroundColor = getComputedStyle(squareOne).backgroundColor;
             //---------------------или для получения цвета через переменную------------
-            // let computedStyle = getComputedStyle(square);
-            // squareBig.style.backgroundColor = computedStyle.backgroundColor;
+            // let computedStyle = getComputedStyle(squareOne);
+            // squareTwo.style.backgroundColor = computedStyle.backgroundColor;
 
             squareOne.hidden = true;
+
         }
     }
     function moveElement(event) {

@@ -5,6 +5,8 @@
 }
 
 .column {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -24,16 +26,15 @@ a {
     text-decoration: none;
 }
 
-.squares {
-    display: flex;
-    justify-content: space-between;
-    gap: 50px;
-}
-
 .block {
     margin-top: 50px;
     display: flex;
     justify-content: space-between;
+    gap: 20px;
+}
+
+.squares {
+    display: flex;
 }
 
 .square {
@@ -41,7 +42,8 @@ a {
     height: 500px;
     display: flex;
     align-content: center;  
-    align-items: center;  
+    align-items: center; 
+    justify-content: center; 
 }
 
 .square_one {
