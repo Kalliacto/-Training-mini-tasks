@@ -1,4 +1,4 @@
-const jsBlock = document.querySelector('.js-block');
+const squareOne = document.querySelector('.square_one');
 const jsColor = document.querySelector('.js-color');
 const jsBtn = document.querySelector('.js-btn');
 const hex = '0123456789ABCDEF';
@@ -16,8 +16,9 @@ const getRandomColor = () => {
 
 jsBtn.addEventListener('click', () => {
     getRandomColor();
-    jsBlock.style.background = randomColor;
+    squareOne.style.background = randomColor;
     jsColor.innerHTML = randomColor;
 });
 
 
+const squareTwo = document.querySelector('.square_two');

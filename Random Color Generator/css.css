@@ -24,6 +24,12 @@ a {
     text-decoration: none;
 }
 
+.squares {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
 .block {
     margin-top: 50px;
     width: 300px;
