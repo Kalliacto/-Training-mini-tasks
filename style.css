@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.tex__counter {
+    height: 100vh;
+    background-color:  rgb(221, 215, 131);
+}
+.container {
+    width: 500px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0 0 35px 2px rgb(45, 29, 70);
+}
+.text {
+}
+.counters {
+}
+.counter {
+}
+.words {
+}
+.characters {
+}
+.symbols {
+}
