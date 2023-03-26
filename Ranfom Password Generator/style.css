@@ -1,0 +1,181 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.column {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.hidden {
+    display: none;
+}
+
+ul, li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.password__generator {
+    height: 100vh;
+    background-color:  rgb(221, 215, 131);
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    width: 500px;
+    min-height: 600px;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0 0 35px 2px rgb(45, 29, 70);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+}
+
+.password, .parameters {
+    width: 400px;
+    margin-bottom: 30px;
+}
+
+.password__field {
+    min-height: 50px;
+    border:  2px solid #b3b3b3;
+    border-radius: 5px;
+    background-color: #fff;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+}
+.desc {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.length_item {
+    width: 100px;
+    height: 40px;
+    border: 1px solid #b3b3b3;
+    font-size: 16px;
+    outline: none;
+    padding-left: 10px;
+    margin-right: 10px;
+}
+.length_item:focus {
+    border: 1px solid black;
+}
+
+/* ----------------Для отсутствия дефолтный стрелочек в input с типом number--------------------- */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+/* ------------------------------------- */
+.length_range {
+    width: 200px;
+    height: 8px;
+    -webkit-appearance: none;
+    border-radius: 5px;
+    background-color: #b3b3b3;
+    outline: none;
+    margin: 20px 0 10px;
+}
+/* Сам ползунок */
+.length_range::-webkit-slider-thumb {
+    width: 20px;
+    height: 20px;
+    -webkit-appearance: none;
+    border-radius: 50%;
+    background-color: rgb(221, 215, 131);
+    outline: none;
+    cursor: pointer;
+}
+.parameter {
+    position: relative;
+    margin-bottom: 15px;
+}
+.checkbox {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+.checkbox__input  {
+    position: absolute;
+    opacity: 0;
+}
+.checkbox__label {
+    font-size: 16px;
+    padding-left: 30px;
+    display: block;
+    cursor: pointer;
+    user-select: none;
+}
+
+.parameter .checkbox__label::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 5;
+    width: 20px;
+    height: 20px;
+    border: 1px solid rgb(195, 190, 190);
+    border-radius: 2px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: all .2s;
+}
+
+.parameter .checkbox__label::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    z-index: 10;
+    width: 10px;
+    height: 10px;
+    border-radius: 2px;
+    background: url('img_150005.png') no-repeat;
+    background-size: 10px 10px;
+    opacity: 0;
+    scale: 0;
+    transition: all .2s;
+}
+
+.parameter .checkbox__input:checked+.checkbox__label::before  {
+    border-color: black;
+    border: none;
+}
+
+.parameter .checkbox__input:checked+.checkbox__label::after  {
+    opacity: 1;
+    scale: 1;
+}
+.button__btn {
+    width: 300px;
+    height: 50px;
+    border-radius: 3px;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: rgb(221, 215, 131);
+    cursor: pointer;
+}
