@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.slider {
+    width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.slides {
+    width: calc(var(--slide-count) * 100%);
+    display: flex;
+    transition: all 0.5s;
+}
+.slide {
+    width: calc(100% / var(--slide-count));
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+}
+.user {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.user__avatar {
+    max-width: 30px;
+    max-height: 30px;
+}
+
+.review {
+    width: 80%;
+    align-self: center;
+    position: relative;
+    padding: 5px 15px;
+}
+.review::before {
+    content: url(./image/decor.png);
+    display: block;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.review::after {
+    content: url(./image/decor2.png);
+    display: block;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.review__text {
+    max-width: 322px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #000;
+    opacity: 0.7;
+}
+.slider__controller {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.slider__controller_btn {
+    border: none;
+    cursor: pointer;
+    width: 14px;
+    height: 14px;
+    padding: 2px;
+    background: url(./image/arrow.svg);
+}
+.slider__controller_btn.left {
+    transform: rotate(180deg);
+}
+.right:disabled,
+.left:disabled {
+    opacity: 0.5;
+}
+
+.slider__controller__markers {
+    width: 100%;
+    overflow: hidden;
+}
+.markers__box {
+    width: calc(100% / 3);
+    margin: 0 auto;
+}
+.markers__wrap {
+    width: calc(100% * var(--slide-count));
+    display: flex;
+    transition: all 0.5s;
+}
+
+.marker {
+    width: calc(100% / var(--slide-count));
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+}
+.marker .marker__img {
+    width: 50%;
+    height: auto;
+    transition: all 0.5s;
+}
+
+.marker__active .marker__img {
+    width: 75%;
+    height: auto;
+    object-fit: contain;
+    border: 2px solid #d64374;
+    border-radius: 50%;
+}
